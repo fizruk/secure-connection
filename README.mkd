@@ -6,6 +6,7 @@ and Google Snappy compression for well-defined communication.
 
 For all this to work you'll need following libraries (I used
 latest available version, mentioned in brackets, for each library):
+
 * [HsOpenSSL](http://hackage.haskell.org/package/HsOpenSSL) (0.10.1.2)
 * [bson](http://hackage.haskell.org/package/bson) (0.1.6)
 * [bson-mapping](http://hackage.haskell.org/package/bson-mapping) (0.1.4)
