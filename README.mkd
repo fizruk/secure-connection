@@ -4,6 +4,9 @@ Simple secure intracting
 This set of Haskell sources demonstrate use of OpenSSL, BSON
 and Google Snappy compression for well-defined communication.
 
+Prerequisites
+-------------
+
 For all this to work you'll need following libraries (I used
 latest available version, mentioned in brackets, for each library):
 
@@ -14,4 +17,33 @@ latest available version, mentioned in brackets, for each library):
 
 I personally used also latest available version of GHC (7.2.2), but
 it should work pretty good with previous 7.x.x versions (and possibly with 6.x.x).
+
+Build and run
+-------------
+
+Building is made simple with supplied Makefile:
+
+    $ make
+
+Before you start server you should provide private key
+and identity certificate for it. It is now hardcoded that
+private key and certificate are located in the same directory
+with names `privkey.pem` and `cert.pem`. To create default
+private key and certificate with `openssl` you can run
+
+    $ make certificate
+
+This command will run `openssl` with some default arguments.
+Latter will ask you for some information to create certificate.
+It does not matter what you will type in there for server and
+client to make a connection.
+
+When you are done and there are `privkey.pem` and `cert.pem` in
+the same directory where executable `server` is located you can
+start server and client:
+
+    $ server &
+    $ client localhost 7357
+
+That's it!
 
