@@ -1,0 +1,16 @@
+Simple secure intracting
+========================
+
+This set of Haskell sources demonstrate use of OpenSSL, BSON
+and Google Snappy compression for well-defined communication.
+
+For all this to work you'll need following libraries (I used
+latest available version, mentioned in brackets, for each library):
+* [HsOpenSSL](http://hackage.haskell.org/package/HsOpenSSL) (0.10.1.2)
+* [bson](http://hackage.haskell.org/package/bson) (0.1.6)
+* [bson-mapping](http://hackage.haskell.org/package/bson-mapping) (0.1.4)
+* [snappy](http://hackage.haskell.org/snappy) (0.2.0.1)
+
+I personally used also latest available version of GHC (7.2.2), but
+it should work pretty good with previous 7.x.x versions (and possibly with 6.x.x).
+
