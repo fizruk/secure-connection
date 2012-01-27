@@ -25,9 +25,9 @@ Building is simple with Makefile supplied:
 
     $ make
 
-Before you start the server you should provide private key
-and identity certificate for it. By now it is hardcoded that
-private key and certificate should be located in the same
+Before you start the server you should provide a private key
+and an identity certificate for it. By now it is hardcoded that
+the private key and the certificate should be located in the same
 directory with names `privkey.pem` and `cert.pem` appropriately.
 To create a default private key and a certificate with `openssl`
 you should run
