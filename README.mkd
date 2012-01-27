@@ -1,45 +1,46 @@
-Simple secure intracting
+Simple secure interacting
 ========================
 
-This set of Haskell sources demonstrate use of OpenSSL, BSON
+This set of Haskell sources demonstrates the use of OpenSSL, BSON
 and Google Snappy compression for well-defined communication.
 
 Prerequisites
 -------------
 
-For all this to work you'll need following libraries (I used
-latest available version, mentioned in brackets, for each library):
+You'll need the following libraries to make this all work (I used the
+latest available version of each library):
 
 * [HsOpenSSL](http://hackage.haskell.org/package/HsOpenSSL) (0.10.1.2)
 * [bson](http://hackage.haskell.org/package/bson) (0.1.6)
 * [bson-mapping](http://hackage.haskell.org/package/bson-mapping) (0.1.4)
 * [snappy](http://hackage.haskell.org/snappy) (0.2.0.1)
 
-I personally used also latest available version of GHC (7.2.2), but
-it should work pretty good with previous 7.x.x versions (and possibly with 6.x.x).
+I also personally used the latest available version of GHC (7.2.2), but
+it should work fine with previous 7.x.x versions (and possibly with 6.x.x).
 
 Build and run
 -------------
 
-Building is made simple with supplied Makefile:
+Building is simple with Makefile supplied:
 
     $ make
 
-Before you start server you should provide private key
-and identity certificate for it. It is now hardcoded that
-private key and certificate are located in the same directory
-with names `privkey.pem` and `cert.pem`. To create default
-private key and certificate with `openssl` you can run
+Before you start the server you should provide private key
+and identity certificate for it. By now it is hardcoded that
+private key and certificate should be located in the same
+directory with names `privkey.pem` and `cert.pem` appropriately.
+To create a default private key and a certificate with `openssl`
+you should run
 
     $ make certificate
 
 This command will run `openssl` with some default arguments.
-Latter will ask you for some information to create certificate.
-It does not matter what you will type in there for server and
-client to make a connection.
+The latter will ask you for some information to create a certificate.
+You can provide any information you want: it does not matter what you
+will type in there for server and client to create a connection.
 
-When you are done and there are `privkey.pem` and `cert.pem` in
-the same directory where executable `server` is located you can
+When you have both `privkey.pem` and `cert.pem` in
+the same directory as executable `server` is located you can
 start server and client:
 
     $ server &
